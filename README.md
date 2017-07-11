@@ -61,7 +61,7 @@ Or you can add the folder to your path so you don't need to write the full path.
 
 5. Edit the app.json, add uses there
 - You can again use SA shortcut, click on `View` -> `Open Project Folder`, open app.json in your favorite text editor
-- Add uses object under the requires:
+- Add uses array under the requires:
 ```
 "uses": [
     "Groups",
