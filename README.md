@@ -1,4 +1,4 @@
-# ExtJS App - Dynamic Package loading in Sencha Architect project
+# ExtJS App - Dynamic Package loading in Sencha Architect
 
 This demo guide is based on this guide [Packing loading on the Fly](https://sencha.guru/2017/04/12/package-loading/) written by Mitchell Simoens.  
 So the main concept is based on the guide, I will post only necessary things. Please read more about each thing in the linked guide.
