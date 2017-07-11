@@ -9,7 +9,7 @@ So the main concept is based on the guide, I will post only necessary things. Pl
 - In the project inspector click on the `Library` than in the config panel find `Library Requires` and add `package-loader`.
 - Save the project, you should see in the Cmd output that the package was added to your project.
 
-[IMAGE HERE]
+![Library image](https://github.com/petrvecera/Ext-DynamicPackage-SAProject/blob/master/Images/library.png?raw=true)
 
 3. Create the new packages
 - Now we need to create the packages, we need to do this from the CLI. You can use SA shortcut, click on `View` -> `Open CLI` 
@@ -70,7 +70,7 @@ Or you can add the folder to your path so you don't need to write the full path.
 ```
 
 So it will look like this:  
-[IMAGE HERE]
+![app.json](https://github.com/petrvecera/Ext-DynamicPackage-SAProject/blob/master/Images/appjson.png?raw=true)
 
 6. Build the packages using the command from the CLI:
 ```
@@ -84,7 +84,7 @@ sencha app build --dev --uses
 - For each "package tab" add the package config, you can do this by writing `pkg` in the config panel 
 and clicking on the `Add` button. 
 
-[IMAGE HERE]
+![Add button](https://github.com/petrvecera/Ext-DynamicPackage-SAProject/blob/master/Images/AddButton.png?raw=true)
 
 The code should look like this:
 ```
@@ -190,7 +190,7 @@ let pkg = tab.pkg;
 ```
 
 So the VC should look like this:
-[IMAGE HERE]
+![View controller code](https://github.com/petrvecera/Ext-DynamicPackage-SAProject/blob/master/Images/VCcode.png?raw=true)
 
 9. Save the project and preview it in the browser.
 
