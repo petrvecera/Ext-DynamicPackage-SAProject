@@ -28,6 +28,7 @@ C:\Users\pagep\bin\Sencha\Architect\Cmd\6.5.0.180\sencha.exe generate package -r
 Or you can add the folder to your path so you don't need to write the full path.
 
 4. Add content to the packages. You will need to create a Main.js in the src folder of each package.
+- The package code could be created manually or as separeted SA project.
 
 ```
 // /path/to/MyApp/package/local/Groups/src/Main.js
