@@ -1,0 +1,193 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mytabpanel",
+        "designer|userClassName": "MyTabPanel"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string"
+    },
+    "name": "MyTabPanel",
+    "designerId": "faaaab90-e26e-4ca6-96f4-acd04459c97f",
+    "viewControllerInstanceId": "86dab974-f70a-49f3-9a83-031f30137da2",
+    "viewModelInstanceId": "563d2bd1-4cfe-4636-8c89-a9555d557004",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Normal Tab"
+            },
+            "configAlternates": {
+                "title": "string"
+            },
+            "name": "MyPanel",
+            "designerId": "7c4527ec-1c42-4d6a-929e-42bd580aa4b8",
+            "cn": [
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "Click on the other tabs to load the packages"
+                    },
+                    "configAlternates": {
+                        "html": "string"
+                    },
+                    "name": "MyComponent",
+                    "designerId": "a547ef18-1cd7-4501-84c5-1a15602082cc"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-user",
+                "layout": "fit",
+                "pkg": "Users",
+                "title": "Users"
+            },
+            "configAlternates": {
+                "title": "string",
+                "iconCls": "string",
+                "layout": "string",
+                "pkg": "string"
+            },
+            "name": "MyPanel1",
+            "designerId": "fd774ae4-d527-498b-a290-f1bc2234c4c5",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "pkg",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-users",
+                "layout": "fit",
+                "pkg": "Groups",
+                "title": "Groups"
+            },
+            "configAlternates": {
+                "title": "string",
+                "iconCls": "string",
+                "layout": "string",
+                "pkg": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "0f091d57-700b-4f27-a0d5-d497d51fd70f",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "pkg",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-cog",
+                "layout": "fit",
+                "pkg": "Settings",
+                "title": "Settings"
+            },
+            "configAlternates": {
+                "title": "string",
+                "iconCls": "string",
+                "layout": "string",
+                "pkg": "string"
+            },
+            "name": "MyPanel3",
+            "designerId": "2e0aecd1-562d-4d2d-ab7b-dcc8c7da4789",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "pkg",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTabpanelActiveItemChange",
+                "implHandler": [
+                    "",
+                    "let tabpanel = sender;",
+                    "let tab = value;",
+                    "let pkg = tab.pkg;",
+                    "",
+                    "    if (pkg) {",
+                    "        if (Ext.Package.isLoaded(pkg)) {",
+                    "            this.handlePackage(pkg);",
+                    "        } else {",
+                    "            tabpanel.setMasked({",
+                    "                message: 'Loading Package...'",
+                    "            });",
+                    "",
+                    "            // let's use little timeout to demostrate the loading",
+                    "            setTimeout(()=>{",
+                    "                Ext.Package",
+                    "                .load(pkg)",
+                    "                .then(this.handlePackage.bind(this, pkg));",
+                    "            }, 250);",
+                    "",
+                    "",
+                    "        }",
+                    "    }",
+                    ""
+                ],
+                "name": "activeItemchange",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onTabpanelActiveItemChange",
+            "designerId": "34e9d91b-c2b2-4831-88d8-cb0d1c5b0b6c"
+        }
+    ]
+}

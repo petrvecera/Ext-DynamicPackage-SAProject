@@ -1,0 +1,127 @@
+{
+   "name": "MyApp",
+   "_commment": "THIS IS MY COMMMENT",
+   "version": "1.0.0.0",
+   "framework": "ext",
+   "toolkit": "modern",
+   "theme": "theme-triton-7104d3ee-ceea-4be6-a7c9-efaf9f69ead8",
+   "requires": [
+      "font-awesome",
+      "package-loader"
+   ],
+   "uses": [
+      "Groups",
+      "Settings",
+      "Users"
+   ],
+   "indexHtmlPath": "index.html",
+   "classpath": [
+      "app"
+   ],
+   "overrides": [
+      "overrides"
+   ],
+   "fashion": {
+      "inliner": {
+         "enable": false
+      }
+   },
+   "sass": {
+      "namespace": "MyApp",
+      "generated": {
+         "var": "sass/save.scss",
+         "src": "sass/save"
+      },
+      "etc": [
+         "sass/etc/all.scss"
+      ],
+      "var": [
+         "sass/var/all.scss",
+         "sass/var"
+      ],
+      "src": [
+         "sass/src"
+      ]
+   },
+   "js": [
+      {
+         "path": "${framework.dir}/build/ext-modern-all-debug.js"
+      },
+      {
+         "path": "app.js",
+         "bundle": true
+      }
+   ],
+   "css": [
+      {
+         "path": "${build.out.css.path}",
+         "bundle": true,
+         "exclude": [
+            "fashion"
+         ]
+      }
+   ],
+   "loader": {
+      "cache": false,
+      "cacheParam": "_dc"
+   },
+   "production": {
+      "output": {
+         "appCache": {
+            "enable": true,
+            "path": "cache.appcache"
+         }
+      },
+      "loader": {
+         "cache": "${build.timestamp}"
+      },
+      "cache": {
+         "enable": true
+      },
+      "compressor": {
+         "type": "yui"
+      }
+   },
+   "testing": {},
+   "development": {
+      "watch": {
+         "delay": 250
+      }
+   },
+   "bootstrap": {
+      "base": "${app.dir}",
+      "microloader": "bootstrap.js",
+      "css": "bootstrap.css"
+   },
+   "output": {
+      "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+      "appCache": {
+         "enable": false
+      }
+   },
+   "cache": {
+      "enable": false,
+      "deltas": true
+   },
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      {
+         "path": "resources",
+         "output": "shared"
+      }
+   ],
+   "archivePath": "archive",
+   "slicer": null,
+   "ignore": [
+      "(^|/)CVS(/?$|/.*?$)"
+   ],
+   "id": "d3030cc7-4a03-4465-9788-20ea3d894035"
+}

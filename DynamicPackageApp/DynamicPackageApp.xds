@@ -1,0 +1,51 @@
+{
+    "name": "DynamicPackageApp",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.5.0.180",
+            "frameworkVersion": "6.5.0.775"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:53639/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "4.2.1",
+    "xdsBuild": 224,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "modern65",
+    "viewOrderMap": {
+        "view": [
+            "faaaab90-e26e-4ca6-96f4-acd04459c97f",
+            "563d2bd1-4cfe-4636-8c89-a9555d557004",
+            "86dab974-f70a-49f3-9a83-031f30137da2"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "11fe81b2-606e-421d-87cc-a2c085c2c572",
+            "7104d3ee-ceea-4be6-a7c9-efaf9f69ead8"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

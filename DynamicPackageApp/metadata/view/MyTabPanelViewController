@@ -1,0 +1,55 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mytabpanel",
+        "designer|userClassName": "MyTabPanelViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "86dab974-f70a-49f3-9a83-031f30137da2",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "pkg"
+                ],
+                "fn": "handlePackage",
+                "implHandler": [
+                    " let tabpanel = this.getView(),",
+                    "        tab = tabpanel.child('[pkg=' + pkg + ']');",
+                    "",
+                    "    tabpanel.setMasked(null);",
+                    "",
+                    "    //only add item if the item isn't already added",
+                    "    if (!tab.hasPkgItem) {",
+                    "        tab.hasPkgItem = true;",
+                    "",
+                    "        tab.add({",
+                    "            xclass: 'MyApp.view.' + pkg.toLowerCase() + '.Main'",
+                    "        });",
+                    "    }"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "handlePackage",
+            "designerId": "ef96a267-d9db-4c1c-93f9-0183a75dc788"
+        }
+    ]
+}
